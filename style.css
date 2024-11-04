@@ -1,0 +1,221 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: border-box;
+    cursor: default;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+body{
+    background-color: #BADBBA;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin-top: 30px;
+    width: 40vw;
+    background-color: #F5E6C8;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    animation: popIn 0.1s ease-out;
+    overflow: auto;
+}
+
+.container:hover{
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2); 
+    transition: 0.3s ease-in-out;
+}
+
+.taskList, .completedTaskList {
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto;
+}
+
+.taskList::-webkit-scrollbar, .completedTaskList::-webkit-scrollbar {
+    width: 12px;
+}
+
+.taskList::-webkit-scrollbar-track, .completedTaskList::-webkit-scrollbar-track {
+    background: #F5E6C8;
+    border-radius: 10px;
+}
+
+.taskList::-webkit-scrollbar-thumb, .completedTaskList::-webkit-scrollbar-thumb {
+    background-color: #3e3f41;
+    border-radius: 10px;
+    border: 3px solid #F5E6C8;
+}
+
+.taskList::-webkit-scrollbar-thumb:hover, .completedTaskList::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+
+.title{
+    font-size: 50px;
+    font-weight: bolder;
+    color:#3e3f41;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+form{
+    width: 100%;
+    padding-top: 50px ;
+    display: flex;
+    justify-content: center;
+}
+
+#inputTask{
+    width: 58%;
+    font-size: 25px;
+    color: #3e3f41;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 5px #3e3f41;
+    outline: none;
+    padding-bottom: 10px;
+    cursor: auto;
+}
+
+#inputButton{
+    background-color: #3e3f41;
+    outline: none;
+    color: #F5E6C8;
+    width: 100px;
+    border-radius: 10px ;
+    cursor: pointer;    
+}
+
+#inputButton:hover {
+    background-color: rgba(62, 63, 65, 0.8);
+}
+
+
+.icons .fa-pen-to-square:hover{
+    transform: rotate(15deg);
+    transition: transform 0.2s ease;
+}
+
+.icons .fa-trash:hover{
+    transform: rotate(15deg);
+    transition: transform 0.2s ease;
+}
+
+.taskList{
+    width: 73.5%;
+    padding: 50px;
+    padding-left: 75px;
+    font-size: 25px;
+    justify-content: flex-start ;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.completedTaskList ul{
+    width: 73.5%;
+    padding: 50px;
+    padding-left: 75px;
+    font-size: 25px;
+    justify-content: flex-start ;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    padding: 0;
+}
+
+
+li {
+    text-wrap: wrap;
+    font-size: 30px ;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px;
+    border-radius: 2px;
+    border-bottom: 5px solid #3e3f41;
+    word-wrap: break-word;
+    width: 100%;
+    animation: popIn 0.1s ease-out;
+}
+
+li:hover{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); 
+    transition: 0.3s;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes popIn{
+    0%{
+        transform: scale(0.95);
+        opacity: 0.75;
+    }
+    33%{
+        transform: scale(1);
+        opacity: 0.85;
+    }66%{
+        transform: scale(1.05);
+        opacity: 0.95;
+    }100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+
+}
+
+#unordered-completed li{
+    text-decoration: line-through;
+    text-decoration-color: #3e3f41;
+    text-decoration-thickness: 5px ;
+    animation: popIn 0.1s ease-out;
+}
+
+.task-text {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    color: #3e3f41;
+    flex-wrap: wrap;
+    max-width: 80%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.icons i {
+    margin-left: 10px; 
+    cursor: pointer;
+    color: #3e3f41;
+}
+
+.icons i:hover {
+    color: #666; 
+}
+
+#titleCompleted{
+    font-size: 35px;
+    font-weight: 700;
+    color:#3e3f41;
+    display: flex;
+    justify-content: left;
+    padding-top: 20px;
+    padding-left: 80px;
+}
